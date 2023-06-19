@@ -1,0 +1,24 @@
+.title {
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+}
+
+.courseContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    justify-content: center;
+    gap: 3rem 20px;
+}
+
+@media only screen and (max-width: 690px) {
+    .courseContainer {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .courseContainer {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }
+}

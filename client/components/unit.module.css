@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+@media only screen and (max-width: 850px) {
+    .title {
+        font-size: clamp(22px, 5vw, 32px);
+    }
+}

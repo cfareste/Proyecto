@@ -1,0 +1,134 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 2rem;
+}
+
+.radioContainer {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.question {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.details {
+    font-style: italic;
+    color: #555555;
+}
+
+.radio {
+    appearance: none;
+    display: none;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 0;
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    color: var(--highlight-color);
+    width: 100%;    
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.label:hover:not(.correct, .incorrect) {
+    background-color: var(--highlight-color);
+    color: var(--background-default);
+}
+
+.radio:disabled ~ .label, .submit:disabled {
+    cursor: default;
+}
+
+.form {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.form:not(:has(+ .answerText.showAnswer)) {
+    margin: 1rem 0;
+}
+
+.text {
+    width: 100%;
+    padding: .3rem .7rem;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.submit {
+    min-width: 84px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 0;
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    background-color: var(--background-default);
+    color: var(--highlight-color);   
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.submit:not(.incorrect, .correct):hover {
+    background-color: var(--highlight-color);
+    color: var(--background-default);
+}
+
+.correct {
+    border-color: #79E086;
+    background-color: #79E086;
+    color: var(--background-default);
+}
+
+.incorrect {
+    border-color: #FF6565;
+    color: #FF6565;
+}
+
+.answerText {
+    display: none;
+}
+
+.answerText.showAnswer {
+    display: block;
+    color: #FF6565;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 950px) {
+    .wrapper {
+        margin: 1rem 0;
+    }
+
+    .question {
+        font-size: clamp(14px, 2vw, 18px);
+        line-height: 22px;
+    }
+
+    .text {
+        font-size: clamp(13px, 2vw, 16px);
+    }
+
+    .details, .correct, .incorrect, .answerText.showAnswer, .submit, .label {
+        font-size: clamp(12px, 2vw, 16px);
+    }
+
+    .label {
+        
+    }
+}

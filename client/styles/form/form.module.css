@@ -1,0 +1,194 @@
+.container {
+    position: relative;
+    background-color: var(--highlight-color-alpha);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 328px;
+    padding: 0 1rem;
+    background-color: var(--background-default);
+    border-radius: 10px;
+    box-shadow: 0px 17px 60px 4px rgba(0,0,0,0.24);
+}
+
+.wrapper:has(.registerForm) {
+    min-height: 440px;
+}
+
+.wrapper:has(.loginForm) {
+    width: 468px;
+    min-width: 325px;
+}
+
+.title {
+    font-size: 2rem;
+    margin: .6em 0;
+}
+
+.loginForm {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+        'mail mail'
+        'paswd paswd'
+        'subm subm';
+    width: 100%;
+    min-height: 270px;
+}
+
+.registerForm {
+    display: grid;
+    grid-gap: 1rem;
+    width: 100%;
+    min-height: 350px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.loginForm .emailGroup {grid-area: mail;}
+.loginForm .passwordGroup {grid-area: paswd;}
+.loginForm .btn {grid-area: subm;}
+
+.nameGroup {grid-area: 1/1/1/4;}
+.surnamesGroup {grid-area: 1/4/1/7;}
+.registerForm .emailGroup {grid-area: 2/1/2/4;}
+.registerForm .passwordGroup {grid-area: 2/4/2/7;}
+.ageGroup {grid-area: 3/1/3/3;}
+.schoolGroup {grid-area: 3/3/3/5;}
+.ccaaGroup {grid-area: 3/5/3/7;}
+.fileLabelGroup {grid-area: 4/1/4/4;}
+.registerForm .btn {grid-area: 4/4/4/7;}
+.linkGroup {grid-area: 5/1/5/7;}
+
+.formGroup {
+    width: 100%;
+}
+
+.linkGroup {
+    margin-top: -1.5rem;
+}
+
+.inp {
+    background-color: var(--background-default);
+    padding: .5rem 0rem 4px .25rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: .3s;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #D2D2D2;
+    transition: .8s;
+}
+
+.inp:not(.inpError):focus {
+    border-bottom: 2px solid var(--highlight-color);
+}
+
+.inpError {
+    border-bottom: 2px solid #db0101;
+}
+
+.inpError::placeholder {
+    color: #db0101;
+}
+
+.inp[type = file] {
+    display: none;
+}
+
+.fileLabel {
+    height: 60px;
+    background-color: var(--background-default);
+    color: var(--highlight-color-alpha);;
+    border: 4px solid var(--highlight-color-alpha);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.fileLabel:hover {
+    border-color: var(--highlight-color);
+    color: var(--highlight-color);
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: var(--highlight-color-alpha);
+    border: 2px solid var(--highlight-color-alpha);
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    color: #fff;
+    border: 2px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+}
+
+.registerLink, .link {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.registerForm .registerLink {
+    margin-top: 1rem;
+}
+
+.link {
+    color: var(--highlight-color-alpha);
+}
+
+.link:hover, .link:visited:hover {
+    color: var(--highlight-color);
+}
+
+.link:visited {
+    text-decoration: none;
+    color: var(--highlight-color-alpha);
+}
+
+.error {
+    font-size: 14px;
+    color: #db0101;
+}
+
+@media only screen and (max-width: 530px) {
+    .wrapper:has(.registerForm) {
+        min-height: 450px;
+    }
+
+    .ageGroup {grid-area: 3/1/3/4;}
+    .schoolGroup {grid-area: 3/4/3/7;}
+    .ccaaGroup {grid-area: 4/1/4/4;}
+    .fileLabelGroup {grid-area: 4/4/4/7;}
+    .registerForm .btn {grid-area: 5/1/5/7;}
+    .linkGroup {grid-area: 6/1/6/7;}
+
+    .fileLabel {
+        font-size: 16px;        
+        height: 45px;
+    }
+
+    .error {
+        font-size: 12px;
+    }
+}

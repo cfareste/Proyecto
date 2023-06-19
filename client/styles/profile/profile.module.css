@@ -1,0 +1,126 @@
+.contentWrapper {
+    position: relative;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    margin-bottom: 10rem;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    margin-top: 3rem;
+    display: grid;
+    gap: 3rem 2rem;
+    width: 100%;
+    min-height: 350px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nameGroup {grid-area: 1/1/1/1;}
+.surnamesGroup {grid-area: 1/2/1/2;}
+.emailGroup {grid-area: 2/1/2/1;}
+.passwordGroup {grid-area: 2/2/2/2;}
+.ageGroup {grid-area: 3/1/3/1;}
+.schoolGroup {grid-area: 3/2/3/2;}
+.ccaaGroup {grid-area: 4/1/4/1;}
+.fileLabelGroup {grid-area: 4/2/4/2;}
+.btn {grid-area: 5/1/5/3;}
+
+.inp:not([type = file]) {
+    padding-left: .25rem;
+    background-color: var(--background-default);
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: .3s;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #D2D2D2;
+    height: 3.25rem;
+    transition: .8s;
+}
+
+.inp:not([type = file]):focus {
+    border-bottom: 2px solid var(--highlight-color);
+}
+
+.inp[type = file] {
+    display: none;
+}
+
+.fileLabel {
+    height: 100%;
+    background-color: var(--background-default);
+    color: var(--highlight-color-alpha);;
+    border: 4px solid var(--highlight-color-alpha);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.fileLabel:hover {
+    border-color: var(--highlight-color);
+    color: var(--highlight-color);
+}
+
+.btn {
+    margin-top: 1rem;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: var(--highlight-color-alpha);
+    border: 2px solid var(--highlight-color-alpha);
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    color: #fff;
+    border: 2px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+}
+
+.error {
+    font-size: 14px;
+    color: #db0101;
+}
+
+@media only screen and (max-width: 800px) {
+    .title {
+        font-size: clamp(20px, 4vw, 32px);
+        margin-bottom: 0.5rem;
+    }
+
+    .form {
+        margin-top: 2rem;
+        gap: 2rem 1rem;
+    }
+
+    .inp:not([type = file]), .fileLabel {
+        font-size: clamp(14px, 3vw, 1.25rem);
+    }
+
+    .error {
+        font-size: 12px;
+        color: #db0101;
+    }
+}

@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 60px;
+    height: 60px;
+}
+
+.day {
+    font-size: clamp(13px, 3vw, 16px);
+}
+
+.today {
+    color: var(--highlight-color);
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 540px) {
+    .image {
+        width: 55px;
+        height: 55px;
+    }
+}

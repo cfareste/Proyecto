@@ -1,0 +1,78 @@
+.form {
+    width: 20rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    font-size: 18px;
+    height: 2rem;
+    width: 100%;
+    padding: .5rem 2rem;
+    outline: none;
+    border: 1px solid var(#000);
+}
+
+.icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+
+.results {
+    overflow-y: scroll;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-default);
+    border: 1px solid #a8a8a8;
+    top: 2rem;
+    right: 0;
+    min-width: 100%;
+    width: calc(100% + 5rem);
+    height: auto;
+    max-height: 350px;
+    z-index: 1;
+
+}
+
+.results::-webkit-scrollbar {
+    width: 0;
+}
+
+.item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.itemText {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.itemTitle {
+    font-weight: 500;
+
+}
+
+.image {
+    width: 40%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.message {
+    padding: .7rem;
+}
+
+@media only screen and (max-width: 670px) {
+    .form {
+        display: none;
+    }
+}

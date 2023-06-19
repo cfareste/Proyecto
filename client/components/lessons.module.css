@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    max-width: 1250px;
+    white-space: nowrap;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 5rem;
+}
+
+.wrapper.showScrollbar {
+    overflow-x: scroll;
+}
+
+.showScrollbar::-webkit-scrollbar {
+    background-color: rgb(234, 234, 234);
+    height: .6rem;
+}
+
+.showScrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--highlight-color);
+    border-radius: 5px;
+}
+
+.message {
+    font-style: italic;
+    color: gray;
+}
+
+@media only screen and (max-width: 540px) {
+    .wrapper {
+        margin-bottom: 3.5rem;
+    }
+}

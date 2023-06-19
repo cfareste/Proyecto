@@ -1,0 +1,45 @@
+.wrapper {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.totalStreak {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 6rem;
+    height: 6rem;
+    border: .6rem solid #ffa629;
+    border-radius: 50%;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffa629;
+}
+
+.streakDays {
+    display: flex;
+    gap: 2.5rem;
+}
+
+@media only screen and (max-width: 670px) {
+    .wrapper {
+        margin: 2.5rem 0 5rem;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .totalStreak {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .streakDays {
+        gap: clamp(.5rem, 3vw, 2.5rem);
+    }
+}

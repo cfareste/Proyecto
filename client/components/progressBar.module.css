@@ -1,0 +1,23 @@
+.progressBar {
+    height: .5rem;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid var(--highlight-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--highlight-color);
+    transform-origin: 0% 100%;
+    transition: .5s all cubic-bezier(.74,-0.01,.4,1);
+}
+
+@media only screen and (max-width: 900px) {
+    .margin {
+        margin: 0 2.5rem 0 5rem;
+    }
+}

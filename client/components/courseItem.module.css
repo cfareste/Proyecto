@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: .5rem;
+}
+
+.wrapper:hover {
+    color: var(--highlight-color);
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 197px;
+    min-height: 197px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 22px;
+    transition: .3s all;
+}
